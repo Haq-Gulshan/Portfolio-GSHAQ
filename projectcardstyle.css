@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-bg-color: #04091b;
+  --text-color: white;
+  --accent-color: rgb(244, 173, 20);
+
+  --paragraph: "Sen", serif;
+  --sec-title: "EB Garamond", serif;
+  --sec-main-title: "Lilita One", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--main-bg-color);
+}
+#house {
+  font-size: 28px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  margin-top: 2rem;
+}
+.sec-main-title {
+  font-family: var(--sec-title);
+  font-size: 5rem;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+}
+.sec-main-title span {
+  color: var(--accent-color);
+}
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  gap: 4.3rem;
+  padding: 2rem 2rem;
+  margin-right: 60px;
+}
+.card-item img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px var(--text-color);
+}
+.card-item {
+  text-align: center;
+  background: var(--text-color);
+  border: 7px solid var(--accent-color);
+  border-radius: 2rem;
+  padding: 20px;
+  cursor: pointer;
+  color: var(--main-bg-color);
+  transition: background-color 0.7s, color 0.7s;
+  overflow: hidden;
+}
+.card-item:hover {
+  background-color: var(--main-bg-color);
+  color: whitesmoke;
+  border: 3px solid var(--text-color);
+  box-shadow: 0 0 25px var(--accent-color);
+  transform: translateY(-10px) scale(1.03);
+}
+.card-item h2 {
+  font-family: var(--sec-main-title);
+  font-size: 2.3rem;
+  letter-spacing: 1.7px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.card-item p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1.7rem;
+  margin-top: 1rem;
+  font-family: var(--paragraph);
+}
+.icon-container {
+  width: 100%;
+  height: 65px;
+}
+#avatar {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+}
+.btn {
+  color: var(--main-bg-color);
+  background-color: var(--accent-color);
+  font-family: var(--sec-title);
+  font-weight: 900;
+  box-shadow: 0 0 18px var(--main-bg-color);
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.8rem 1.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
