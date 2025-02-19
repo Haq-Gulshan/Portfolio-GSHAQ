@@ -162,6 +162,11 @@ p {
   font-family: var(--sec-title);
   font-weight: bold;
 }
+#about-btn {
+  display: flex;
+  gap: 50px;
+}
+
 .btn-gp .button {
   color: var(--main-bg-color);
   background-color: var(--accent-color);
@@ -194,7 +199,7 @@ p {
     0 0 75px var(--text-color);
 }
 
-/* Om Meg section-------------- */
+/* About section-------------- */
 .about {
   display: flex;
   gap: 4rem;
@@ -228,14 +233,12 @@ p {
 #pre {
   margin-bottom: 60px;
 }
-.about-content .btn-gp .button {
-  margin: 16px;
-}
+
 .btn-gp a:nth-of-type(2) {
   background-color: var(--text-color);
 }
 
-/* Resume page section ------------- */
+/* Resume  section ------------- */
 .content-text p {
   text-align: center;
 }
@@ -254,7 +257,6 @@ p {
 .item-2 {
   margin: 0 30px;
   min-width: auto;
-  /* height: 100px; */
 }
 .item-2 {
   height: 200px;
@@ -263,12 +265,12 @@ p {
   font-size: 4rem;
   font-family: var(--sec-title);
   color: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
+  /* transition: transform 0.5s ease-in-out; */
   white-space: nowrap;
   overflow: visible;
 }
 .item-2 img {
-  width: 100%;
+  width: 7rem;
   height: 100%;
   object-fit: contain;
   transition: transform 0.5s ease-in-out;
@@ -276,6 +278,32 @@ p {
 .slider-2 .category {
   animation: slideReverse 12s linear infinite;
 }
+/* @keyframes slideReverse {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(-250%);
+  }
+  56% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
 @keyframes slideReverse {
   0% {
     transform: translateX(0);
@@ -297,6 +325,7 @@ p {
 }
 
 /* Project section ----------- */
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -313,6 +342,7 @@ p {
   cursor: pointer;
   margin: 25px;
   padding: 0.8rem;
+  position: relative;
 }
 .projects-box:hover {
   color: var(--main-bg-color);
@@ -333,9 +363,16 @@ p {
   font-size: 1.3rem;
   margin-bottom: 50px;
 }
+#pro-img {
+  max-width: 46em;
+}
 .project .button {
   background-color: var(--main-bg-color);
   color: var(--accent-color);
+  position: absolute;
+  bottom: 1em;
+  transform: translate(50%);
+  right: 50%;
 }
 
 /* Contact section */
@@ -443,17 +480,31 @@ textarea {
 ::-webkit-scrollbar-track {
   background-color: var(--text-color);
 }
+
+/* Media Qurey section  */
+@media only screen and (max-width: 1500px) {
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .left-box {
+    max-width: 100%;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-item {
     display: none;
     position: absolute;
   }
-
   #menu {
     display: block;
     cursor: pointer;
   }
-
   #menu.active ~ .nav-item {
     display: flex;
     flex-direction: column;
@@ -464,26 +515,25 @@ textarea {
     border: 1px solid var(--icon-color);
     padding: 10px;
   }
-
   #menu.active ~ .nav-item a {
     display: block;
     padding: 8px 0;
   }
-
   .home {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 3rem;
     align-items: center;
   }
-
   .about {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
   }
-
   .about-img img {
     width: 50vw;
     height: 50vw;
+  }
+  .left-box p {
+    font-size: 1em;
   }
 }
