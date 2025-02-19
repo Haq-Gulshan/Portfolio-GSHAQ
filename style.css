@@ -33,6 +33,14 @@ section {
   --hi-text: "Abril Fatface", serif;
 }
 
+.light-theme {
+  --main-bg-color: rgb(225, 219, 219);
+  --text-color: #0c1f37;
+  --sec-text-color: #0c1f37;
+  --accent-color: #76a817;
+  --icon-color: #84bc1c;
+}
+
 /* Hero section--- */
 .hero {
   background-color: var(--main-bg-color);
@@ -65,12 +73,11 @@ section {
   display: flex;
   gap: 5px;
 }
-
 .nav-item a {
   color: var(--text-color);
   font-size: 1.7rem;
   padding: 8px 12px;
-  margin-right: 4rem;
+  margin-right: 2rem;
   font-family: var(--nav-input);
 }
 
@@ -79,7 +86,15 @@ section {
   color: var(--main-bg-color);
   border-radius: 13px;
 }
-
+#sun {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-right: 60px;
+  cursor: pointer;
+  /* margin-left: rem; */
+  align-items: center;
+}
 #menu {
   display: none;
   color: var(--accent-color);
@@ -364,7 +379,10 @@ p {
   margin-bottom: 50px;
 }
 #pro-img {
-  max-width: 46em;
+  max-width: 32em;
+  max-height: 32em;
+  margin-left: 12rem;
+  margin-top: 5rem;
 }
 .project .button {
   background-color: var(--main-bg-color);
@@ -501,10 +519,12 @@ textarea {
     display: none;
     position: absolute;
   }
+
   #menu {
     display: block;
     cursor: pointer;
   }
+
   #menu.active ~ .nav-item {
     display: flex;
     flex-direction: column;
