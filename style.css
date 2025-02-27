@@ -196,7 +196,6 @@ p {
 .btn-gp .button:hover {
   background-color: var(--main-bg-color);
   color: var(--accent-color);
-  font-size: 1.8rem;
 }
 .profile-img img {
   width: 32vw;
@@ -429,7 +428,6 @@ p {
 }
 .contact-details p:hover {
   color: var(--icon-color);
-  text-shadow: 0 0 20px var(--text-color);
 }
 
 form {
@@ -484,7 +482,6 @@ textarea {
 }
 .name:hover {
   color: var(--accent-color);
-  text-shadow: 0 0 8px var(--text-color);
 }
 
 /* SCROLLBAR */
